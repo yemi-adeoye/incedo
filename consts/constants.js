@@ -1,0 +1,22 @@
+const HTTP_CODES = {
+    'CREATED': 201,
+    'SUCCESS': 200,
+    'BAD_REQUEST': 400,
+    'UNAUTHORIZED': 401,
+    'FORBIDDEN': 403,
+    'SERVER_ERROR': 500
+}
+
+const ROLES = {
+    "DEVELOPER": 'DEVELOPER',
+    "MANAGER": 'MANAGER',
+    "ADMINISTRATOR": 'ADMINISTRATOR',
+}
+
+const STATUS = {
+    INACTIVE: 0,
+    ACTIVE: 1,
+    DELETED: -1
+}
+
+module.exports = { HTTP_CODES, ROLES, STATUS }
