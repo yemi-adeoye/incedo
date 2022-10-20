@@ -5,9 +5,11 @@ const { HTTP_CODES } = require("../consts/constants");
 const bcrypt = require('bcrypt');
 const jwt = require("jsonwebtoken");
 const config = require('config');
+const auth = require("../middleware/auth");
 
-router.get("/", (req, res) => {
-  res.send(`hello from ${scriptName}`);
+router.get("/", auth, (req, res) => {
+    console.log(req.user)
+  res.status(HTTP_CODES.SUCCESS).json({ msg: true })
 });
 
 /**

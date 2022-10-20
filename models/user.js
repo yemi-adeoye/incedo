@@ -15,11 +15,6 @@ const UserSchema = new mongoose.Schema({
     default: null,
     ref: 'User'
   },
-  reports: {
-    type: mongoose.ObjectId,
-    default: null,
-    ref: 'Report'
-  },
   role: {
     type: String,
   },
@@ -29,7 +24,6 @@ const UserSchema = new mongoose.Schema({
   },
   dateJoined: {
     type: Date,
-    default: Date.now,
   },
   status: {
     type: Number,
